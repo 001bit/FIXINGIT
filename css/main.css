@@ -1,0 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*----------HEADER---------*/
+header {
+    width: 100%;
+    height: 4.5rem;
+    background-color: #fff;
+    border-bottom: 1px solid #f1f1f1;
+}
+nav {
+    width: 95%;
+    height: 4.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a {
+    text-decoration: none;
+    color: #141414;
+}
+.logo img {
+    width: 4rem;
+}
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.link ul{
+    display: flex;
+    align-items: center;
+}
+.link ul li {
+    list-style: none;
+}
+.link ul li a {
+    color: #141414;
+    text-decoration: none;
+    padding: 1.2rem;
+}
+.link ul li a:hover {
+    background-color: #141414;
+    color: #fff;
+}
+
+
+/*----------FOOTER---------*/
+footer {
+    width: 100%;
+    min-height: 5rem;
+    background-color: #fff;
+    border-top: 1px solid #f1f1f1;
+}
+.footer-content {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.social li {
+    list-style: none;
+}
+.social a {
+    color: #141414;
+}
+.coopyright {
+    display: flex;
+    align-items: center;
+}
+.coopyright a {
+    color: #141414;
+    margin-left: 0.4rem;
+}
+
+
+/*----------MAIN---------*/
+main {
+    width: 100%;
+    height: auto;
+}
+.container {
+    width: 95%;
+    height: auto;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.post {
+    width: 100%;
+    height: auto;
+    grid-column: 1/3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.sidebar {
+    font-size: 2rem;
+    grid-column: 3/-1;
+}
+
+
+
+/*---------CARD----------*/
+.card {
+    width: 270px;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+}
+.card a {
+    text-decoration: none;
+    color: #5f5f5f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+    font-weight: lighter;
+}
+.card-picture {
+    width: 250px;
+}
+.card-picture img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.card-title h1 {
+    font-size: 1.3rem;
+}
+
+/*----------RESPONSIVE----------*/
+@media screen and (max-width: 768px) {
+    .post {
+        justify-content: center;
+        grid-column: 1/-1;
+    }
+    .sidebar {
+        grid-column: 1/-1;
+    }
+    .card {
+        width: 100%;
+    }
+    .card-picture {
+        width: 100%;
+        max-width: 660px;
+    }
+}
